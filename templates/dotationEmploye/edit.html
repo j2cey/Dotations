@@ -1,0 +1,28 @@
+﻿<h2>Modification Dotation affectee a <strong>{{dotationEmploye.nom}}</strong></h2>
+<hr>
+<table class="dotations-app-table">
+	<tr>
+		<td>Dotation</td>
+		<td>
+			<select data-ng-model="dotationEmploye.idDotation" ng-change="dotationChange()">
+      			<option data-ng-repeat="option in dotations" value="{{option.ID}}">{{option.Libelle}}</option>
+        	</select>
+        </td>
+	</tr>
+	<tr>
+		<td>Valeur</td>
+		<td><input type="text" data-ng-model="dotationEmploye.valeur"></td>
+	</tr>
+	<tr>
+		<td>Statut</td>
+		<td>
+			<select data-ng-model="dotationEmploye.statut">
+      			<option data-ng-repeat="option in statutsdotations" value="{{option.name}}">{{option.name}}</option>
+        	</select>
+        </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" value="Valider" data-ng-click="editDotationEmploye(dotationEmploye)"></td>
+	</tr>
+</table>

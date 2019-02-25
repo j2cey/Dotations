@@ -1,0 +1,32 @@
+﻿<h2>Modification</h2>
+<hr>
+<table class="dotations-app-table">
+	<tr>
+		<td>Libelle</td>
+		<td><input type="text" data-ng-model="dotation.libelle"></td>
+	</tr>
+	<tr>
+		<td>Valeur</td>
+		<td><input type="text" data-ng-model="dotation.valeur"></td>
+	</tr>
+	<tr>
+		<td>Categorie</td>
+		<td>
+		<select data-ng-model="dotation.categorie">
+      		<option data-ng-repeat="option in categoriesemployes" value="{{option.name}}">{{option.name}}</option>
+        </select>
+        </td>
+	</tr>
+	<tr>
+		<td>Statut</td>
+		<td>
+		<select data-ng-model="dotation.statut">
+      		<option data-ng-repeat="option in statutsdotations" value="{{option.name}}">{{option.name}}</option>
+        </select>
+        </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" value="Valider" data-ng-click="editDotation(dotation)"></td>
+	</tr>
+</table>

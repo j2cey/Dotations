@@ -1,0 +1,20 @@
+﻿<link href="/SiteAssets/Dotations/css/style.css" rel="stylesheet" type="text/css">
+<script src="/SiteAssets/Dotations/lib/angular.min.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/lib/angular-route.min.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/lib/jquery.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/lib/jquery.SPServices.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/app.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/services/baseSvc.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/services/dotations/dotations.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/services/dotationEmploye/dotationEmploye.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/index.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotations/add.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotations/edit.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotationEmploye/add.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotationEmploye/edit.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/services/dotationDemande/dotationDemande.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotationDemande/add.js" type="text/javascript"></script>
+<script src="/SiteAssets/Dotations/js/controllers/dotationDemande/edit.js" type="text/javascript"></script>
+<div data-ng-app="dotationApp">
+	<div data-ng-view class="dotations-app"></div>
+</div>

@@ -1,0 +1,73 @@
+﻿.all-dotations table{
+  	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #98bf21;
+}
+
+.all-dotations table th{
+  font-size: 1.4em;
+  text-align: left;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid #98bf21;
+}
+
+.all-dotations table td{
+  font-size: 1.2em;
+  border: 1px solid #98bf21;
+  padding: 5px;
+  text-align: center;
+}
+.all-dotations{
+  margin-top: 17px;
+}
+.add-new-button{
+  background-color: rgb(55, 139, 202);
+  padding: 8px;
+  color: white;
+}
+.add-new-button:visited{
+  color: white;
+}
+.green-button{
+  background-color: rgb(85, 147, 86);
+  padding: 2px;
+  color: white;
+  margin: 0.2em;
+}
+.green-button:visited{
+  color: white;
+}
+.red-button{
+  background-color: rgb(119, 23, 4);
+  padding: 2px;
+  color: white;
+  margin: 0.2em;
+}
+.red-button:visited{
+  color: white;
+}
+.blue-button{
+  background-color: rgb(15, 4, 160);
+  padding: 2px;
+  color: white;
+  margin: 0.2em;
+}
+.blue-button:visited{
+  color: white;
+}
+
+.dotations-app{
+   width: 800px;
+}
+.dotations-app-table{
+  width: 100%;
+}
+.dotations-app-table input[type=text], textarea{
+  width: 50%!important;
+}
+
+.dotations-app-table input[type=button]{
+  margin: 0!important;
+}

@@ -1,0 +1,109 @@
+﻿<div align="left"><h2>Mes Dotations</h2></div>
+<br />
+<div ng-show='false'>
+<a href="#/addDotationEmploye" class="add-new-button">Affecter Dotation</a>
+</div>
+<div class="all-dotations">
+	<table>
+		<tbody>
+			<tr>
+				<th>Libelle</th>
+				<th>Valeur</th>
+                <th>Statut</th>
+                <th>Action</th>
+			</tr>
+			<tr data-ng-repeat="dotationemploye in dotationsEmployes">
+			    <td>{{dotationemploye.Dotation}}</td>
+				<td>{{dotationemploye.Valeur}}</td>
+				<td>{{dotationemploye.Statut}}</td>
+				<td>
+					<a href="#/editDotationEmploye/{{dotationemploye.ID}}"><img src="/SiteAssets/Dotations/images/pencil.png" alt=""></a>
+					<a href="" data-ng-click="removeDotationEmploye(dotationemploye)"><img src="/SiteAssets/Dotations/images/cross.png" alt=""></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<br />
+<br />
+
+<div align="left"><h2>Demandes</h2></div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+			<td style="padding:5px">Statut: </td>
+			<td><select ng-init="statutdemande = statutsDemande[0].Id" data-ng-model="statutdemande" ng-change="refreshDemandes()">
+      			<option data-ng-repeat="option in statutsDemande" value="{{option.name}}">{{option.name}}</option>
+        	</select></td>
+        	<td style="padding:5px">Etat: </td>
+        	<td><select ng-init="etatdemande = etatsDemande[0].Id" data-ng-model="etatdemande" ng-change="refreshDemandes()">
+      			<option data-ng-repeat="option in etatsDemande" value="{{option.name}}">{{option.name}}</option>
+        	</select></td>
+        	</tr>
+		</tbody>
+	</table>
+</div>
+
+<br />
+<a href="#/addDotationDemande" class="add-new-button">Nouvelle Demande</a>
+<br />
+
+<div class="all-dotations">
+	<table>
+		<tbody>
+			<tr>
+				<th>Details</th>
+				<th>Statut</th>
+				<th>Etat</th>
+				<th>Traitement</th>
+			</tr>
+			<tr data-ng-repeat="dotationDemande in dotationsDemandes">
+			    <td>{{dotationDemande.Details}}</td>
+				<td>{{dotationDemande.Statut}}</td>
+				<td>{{dotationDemande.Etat}}</td>
+				<td>
+					<a ng-show="dotationDemande.Etat == 'Ouvert' && dotationDemande.Statut == 'En Cours'" href="#/addDotation" class="green-button">Cloturer</a>
+					<a ng-show="dotationDemande.Etat == 'Ouvert' && dotationDemande.Statut == 'En Cours'" href="#/addDotation" class="red-button">Rejeter</a>
+					<a ng-show="dotationDemande.Etat == 'Ouvert' && dotationDemande.Statut == 'En Cours'" href="#/editDotationDemande/{{dotationDemande.ID}}" class="blue-button">Traiter</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<br />
+<br />
+
+<div ng-show='false'>
+<div align="left"><h2>Liste des Dotations</h2></div>
+<div ng-show="canadmin == 'true'">
+    <a href="#/addDotation" class="add-new-button">Ajouter Nouvelle Dotation</a>
+</div>
+<div class="all-dotations">
+	<table>
+		<tbody>
+			<tr>
+				<th>Libelle</th>
+				<th>Valeur</th>
+				<th>Categorie</th>
+                <th>Statut</th>
+				<th>Action</th>
+			</tr>
+			<tr data-ng-repeat="dotation in dotations">
+			    <td>{{dotation.Libelle}}</td>
+				<td>{{dotation.Valeur}}</td>
+				<td>{{dotation.Categorie}}</td>
+				<td>{{dotation.Statut}}</td>
+				<td>
+					<a href="#/editDotation/{{dotation.ID}}"><img src="/SiteAssets/Dotations/images/pencil.png" alt=""></a>
+					<a href="" data-ng-click="removeDotation(dotation)"><img src="/SiteAssets/Dotations/images/cross.png" alt=""></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>

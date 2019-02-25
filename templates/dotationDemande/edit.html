@@ -1,0 +1,41 @@
+﻿<h2>Traitement Demande de Dotation de <strong>{{dotationDemande.nom}}</strong></h2>
+<hr>
+
+<h3>Dotations de l'employe</h3>
+<br />
+<a href="#/addDotationEmploye/{{dotationDemande.dotationDemandeId}}" class="add-new-button">Ajouter Dotation</a>
+<br />
+<div class="all-dotations">
+	<table>
+		<tbody>
+			<tr>
+				<th>Libelle</th>
+				<th>Valeur</th>
+                <th>Statut</th>
+                <th>Action</th>
+			</tr>
+			<tr data-ng-repeat="dotationemploye in dotationsEmployes">
+			    <td>{{dotationemploye.Dotation}}</td>
+				<td>{{dotationemploye.Valeur}}</td>
+				<td>{{dotationemploye.Statut}}</td>
+				<td>
+					<a href="#/editDotationEmploye/{{dotationemploye.ID}}"><img src="/SiteAssets/Dotations/images/pencil.png" alt=""></a>
+					<a href="" data-ng-click="removeDotationEmploye(dotationemploye)"><img src="/SiteAssets/Dotations/images/cross.png" alt=""></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<hr>
+
+<table class="dotations-app-table">
+	<tr>
+		<td>Commentaire:</td>
+		<td><input type="text" data-ng-model="dotationDemande.traitement"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" value="Valider" data-ng-click="editDotationDemande(dotationDemande)"></td>
+	</tr>
+</table>

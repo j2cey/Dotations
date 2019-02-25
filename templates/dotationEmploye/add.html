@@ -1,0 +1,41 @@
+﻿<h2>Ajouter Dotation a <strong>{{dotationDemande.nom}}</strong></h2>
+<hr>
+<table class="dotations-app-table">
+	<!--<tr>
+		<td>Employe</td>
+		<td>
+			<select data-ng-init="dotationemploye.email = specifiedUser.email" 
+			data-ng-model="dotationemploye.email" ng-change="employeChange()">
+      			<option data-ng-repeat="option in currusers" value="{{option.email}}" ng-selected="obj.name == specifiedUser.name">{{option.name}}</option>
+            </select>
+		</td>
+	</tr> -->
+	<tr>
+		<td>Dotation</td>
+		<td>
+			<select data-ng-model="dotationemploye.idDotation" ng-change="dotationChange()">
+      			<option data-ng-repeat="option in dotations" value="{{option.ID}}">{{option.Libelle}}</option>
+            </select>
+		</td>
+	</tr>
+	<tr>
+		<td>Valeur</td>
+		<td>
+			<input type="text" data-ng-model="dotationemploye.valeur">
+		</td>
+	</tr>
+	<tr>
+		<td>Statut</td>
+		<td>
+			<select data-ng-model="dotationemploye.statut">
+      			<option data-ng-repeat="option in statutsdotations" value="{{option.name}}">{{option.name}}</option>
+            </select>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<input type="button" value="Valider" data-ng-click="addDotationEmploye(dotationemploye)">
+		</td>
+	</tr>
+</table>
